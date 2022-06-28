@@ -5,5 +5,7 @@ env:
   - DJANGO_SECRET_KEY=django-insecure
 install:
   - pip install -r requirements.txt
+before_script:
+  - python manage.py migrate
 script:
   - flake8 .
