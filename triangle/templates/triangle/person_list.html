@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Person list</title>
+</head>
+<body>
+    <h1><a href="{% url 'triangle:person-form' %}">Person Create Form</a></h1>
+
+    {% for person in person_list %}
+        <p><a href="{% url 'triangle:person-update-form' pk=person.pk %}">{{ person.first_name }} {{ person.last_name }} {{ person.email }}</a></p>
+    {% endfor %}
+
+</body>
+</html>

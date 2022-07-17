@@ -1,3 +1,10 @@
-from django.db import models  # noqa: F401
+from django.db import models
 
-# Will use soon
+
+class Person(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    email = models.EmailField()
+
+    def __str__(self):
+        return self.last_name
