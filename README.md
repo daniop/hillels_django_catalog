@@ -1,4 +1,5 @@
-# Hillels Django Catalog
+# Hillels Django Catalog.
 
-### Basic init
+### Structure of catalog app.
 
+![alt text](structure.png)
